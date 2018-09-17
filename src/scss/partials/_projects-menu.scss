@@ -1,0 +1,149 @@
+.projects-menu {
+  @include flexbox;
+  @include align-items(flex-end);
+  width:25%;
+  position:absolute;
+  bottom:$g-tb-margin;
+  right:$g-lr-margin;
+  z-index:2;
+  
+  .information & {
+    //display:none;
+    
+    @include respond-to('mobile') {
+      display:none;
+    }
+  }
+  
+  @include respond-to('mobile') {
+    right:0;
+  }
+  
+  @include transition($transition-duration transform);
+  .project & {
+    @include transform(translate(0px, -100vh));
+  }
+  .home &, .information & {
+    transition-duration:0s;
+  }
+  
+  @include respond-to('mobile') {
+    position:relative;
+    display:block;
+    width:100%;
+    left:auto;
+    bottom:auto;
+  }
+  
+  ul {
+    margin-bottom:-.5em;
+    
+    @include respond-to('mobile') {
+      margin:0 25px;
+    }
+    
+    @include respond-to('mobile-landscape') {
+      @include flexbox;
+      @include flex-wrap(wrap);
+    }
+    
+    li { 
+      
+      @include respond-to('mobile-landscape') {
+        width:50%;
+        
+        &:nth-child(even) {
+          
+          a {
+            margin-left:$g-lr-margin/2;
+          }
+        }
+        
+        &:nth-child(odd) {
+          a {
+            margin-right:$g-lr-margin/2;
+          }
+          
+        }
+      }
+      
+      &.projects-menu-label {
+        margin-bottom:8em;
+      }
+      
+      a {
+        display:block;
+        padding:.5em 0;
+        //float:left;
+        //clear:left;
+        
+        .nav-image {
+          display:none;
+          
+          margin-bottom:.2em;
+          
+          @include respond-to('mobile') {
+            display:block;
+          }
+        }
+        
+        @include respond-to('mobile') {
+          padding-top:0;
+          padding-bottom:$g-lr-margin/2;
+        }
+        
+        &.active, &.clicked {
+          padding-left:$g-lr-margin/2;
+          
+          @include respond-to('mobile') {
+           padding-left:0; 
+          }
+        }
+      }
+      
+      &:last-child {
+        a {
+          @include respond-to('mobile') {
+            padding-bottom:0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.projects-menu-images {
+  @include flexbox;
+  @include align-items(flex-end);
+  width:calc(75% - 72px);
+  position:absolute;
+  left:$g-lr-margin;
+  z-index:2;
+  bottom:$g-tb-margin;
+  
+  @include transition($transition-duration transform);
+  .project & {
+    @include transform(translate(0px, -100vh));
+  }
+  .home &, .information & {
+    transition-duration:0s;
+  }
+  
+  a {
+    display:none;
+    //@include opacity(.2);
+    position:absolute;
+    margin-right:$g-lr-margin;
+    
+    &.active, &.clicked {
+      //@include opacity(1);
+      display:block;
+    }
+    
+    img {
+      width:100%;
+    }
+  }
+  
+  
+}

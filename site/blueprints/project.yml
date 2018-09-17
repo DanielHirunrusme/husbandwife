@@ -1,0 +1,82 @@
+title: Project
+pages: false
+files:
+  sortable: true
+fields:
+  title:
+    label: Title
+    type:  text
+  coverimage:
+    type: image
+  year:
+    label: Year
+    type:  date
+    width: 1/4
+  text:
+    label: Text
+    type:  markdown
+  credits:
+    label: Credits
+    type:  markdown
+  builder:
+      label: Sections
+      type: builder
+      fieldsets:
+        bodytext:
+          label: Text Banner
+          snippet: sections/textbanner
+          fields:
+            text:
+              label: text
+              type: markdown
+        imageBanner:
+          label: Image Banner
+          snippet: sections/imagebanner
+          fields:
+            picture:
+              label: Background Image
+              type: image
+            text:
+              label: Caption Text
+              type: markdown
+        singleimage:
+          label: Single Image
+          snippet: sections/singleimage
+          fields:
+            picture:
+              label: Image
+              type: image
+            text:
+              label: Caption Text
+              type: markdown
+        imageWithText:
+          label: 2-Up Image and Text
+          snippet: sections/imagewithtext
+          fields:
+            picture:
+              label: Image
+              type: image
+            text:
+              label: Text
+              type: markdown
+        videoBanner:
+          label: Video Banner
+          snippet: sections/videobanner
+          fields:
+            video:
+              label: Video
+              type: embed
+            text:
+              label: Caption Text
+              type: markdown
+        paragraph:
+          label: Paragraph
+          snippet: sections/paragraph
+          fields:
+            text:
+              label: Text
+              type: markdown
+  tags:
+    label: Tags
+    type:  tags
+    separator: /

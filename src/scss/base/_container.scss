@@ -1,0 +1,41 @@
+#barba-wrapper {
+  @include transition($transition-duration transform);
+  position:absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  //overflow-y:scroll;
+  //-webkit-overflow-scrolling: touch;
+  
+	@include respond-to('mobile') {
+		position:relative;
+    transition:none !important;
+	}
+  
+  .barba-container {
+ 
+    width:100%;
+  }
+  
+  @include transform(translate(0px, 100vh));
+  
+  @include respond-to('mobile') {
+   transform:none;
+  }
+  
+  .project & {
+    @include transform(translate(0px, 0vh));
+  }
+  
+  .information & {
+    top:-100vh;
+    
+    @include respond-to('mobile') {
+     top:auto; 
+    }
+  }
+  
+  .home &, .information & {
+    transition-duration:0s;
+  }
+}

@@ -1,0 +1,209 @@
+//global
+$g-size:13px;
+$g-laptop-size:11px;
+$g-phone-size:12px;
+$g-mobileonly-size:4vw;
+$g-font:'graphik';
+
+//breakpoints
+$break-desktop:1441px;
+$break-laptop:1440px;
+$break-ipad:1000px;
+$break-phone:767px;
+
+//animation
+$nav-transition-duration:1s;
+$transition-duration:.5s;
+$zoom-transition-duration:1.2s;
+$transition-timing-function: ease-out;
+$animation-speed: 0.2s;
+
+$max-width:1200px;
+
+//gutters+margins
+$padding:20px;
+
+$g-lr-margin:36px;
+$g-tb-margin:36px;
+
+$g-gutter:12px;
+
+//desktop
+$g-desktop-column:118px;
+$g-offset-one:130px;
+
+
+$g-padding-v:10%;
+$g-padding-h:10%;
+
+$g-h-padding:5vw;
+$g-v-padding:4vh;
+
+//colors
+
+$c-white:#ffffff;
+$c-black:#000000; 
+$c-background:#fff;
+$c-background-search:#e5e5e5;
+$c-gray:#353535;
+$c-dark-gray:#282924;
+$c-orange:#BF6A49;
+$c-overlay-blue:#092647;
+$c-deactivated-text:#919191;
+$c-global:$c-dark-gray;
+$c-red: #e84a37;
+
+//font sizes
+$f-global-size:1em;
+$f-tablet-size:1em;
+$f-mobileonly-size:3em;
+
+
+$f-name-mobileonly-size:7em;
+
+$small-font-sizes: (
+  null  : 11px,
+  $break-ipad : 11px,
+  $break-laptop : 11px,
+  $break-desktop: 11px
+);
+
+$small-line-height: (
+  null  : 1.6em,
+  $break-ipad : 1.6em,
+  $break-laptop : 1.6em,
+  $break-desktop: 1.6em
+);
+
+
+$p-font-sizes: (
+  null  : 12px,
+  $break-ipad : 12px,
+  $break-laptop : 12px,
+  $break-desktop: 12px
+);
+
+$p-line-height: (
+  null  : 16px,
+  $break-ipad : 16px,
+  $break-laptop : 16px,
+  $break-desktop: 16px
+);
+
+$hero-font-sizes: (
+  null  : 80px,
+  $break-ipad : 80px,
+  $break-laptop : 80px,
+  $break-desktop: 80px
+);
+
+$hero-line-height: (
+  null  : 1em,
+  $break-ipad : 1em,
+  $break-laptop : 1em,
+  $break-desktop: 1em
+);
+
+$h1-font-sizes: (
+  null  : 11px,
+  $break-ipad : 11px,
+  $break-laptop : 11px,
+  $break-desktop: 11px
+);
+
+$h1-line-height: (
+  null  : 14px,
+  $break-ipad : 14px,
+  $break-laptop : 14px,
+  $break-desktop: 14px
+);
+
+$h2-font-sizes: (
+  null  : 11px,
+  $break-ipad : 11px,
+  $break-laptop : 11px,
+  $break-desktop: 11px
+);
+
+$h2-line-height: (
+  null  : 14px,
+  $break-ipad : 14px,
+  $break-laptop : 14px,
+  $break-desktop: 14px
+);
+
+$h3-font-sizes: (
+  null  : 18px,
+  $break-ipad : 18px,
+  $break-laptop : 18px,
+  $break-desktop: 18px
+);
+
+$h3-line-height: (
+  null  : 1.3em,
+  $break-ipad : 1.3em,
+  $break-laptop : 1.3em,
+  $break-desktop: 1.3em
+);
+
+$h4-font-sizes: (
+  null  : 14px,
+  $break-ipad : 14px,
+  $break-laptop : 14px,
+  $break-desktop: 14px
+);
+
+$h4-line-height: (
+  null  : 1em,
+  $break-ipad : 1em,
+  $break-laptop : 1em,
+  $break-desktop: 1em
+);
+
+$h5-font-sizes: (
+  null  : 53px,
+  $break-ipad : 53px,
+  $break-laptop : 53px,
+  $break-desktop: 53px
+);
+
+$h6-font-sizes: (
+  null  : 34px,
+  $break-ipad : 34px,
+  $break-laptop : 34px,
+  $break-desktop: 34px
+);
+
+$h6-line-height: (
+  null  : 1.1em,
+  $break-ipad : 1.1em,
+  $break-laptop : 1.1em,
+  $break-desktop: 1.1em
+);
+
+@mixin line-height($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      line-height: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        line-height: $fs-font-size;
+      }
+    }
+  }
+}
+
+//breakpoints
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}

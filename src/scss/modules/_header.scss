@@ -1,0 +1,17 @@
+header {
+  @include transition($transition-duration transform);
+  position:fixed;
+  left:0;
+  width:100%;
+  top:0;
+  height:100%;
+  
+  .project & {
+    @include transform(translate(0px, -100vh));
+  }
+  
+  .home & {
+    @include transform(translate(0px, 0px));
+  }
+
+}

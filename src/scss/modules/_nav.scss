@@ -1,0 +1,88 @@
+.home-link, nav {
+  position:fixed;
+  top:$g-tb-margin;
+  z-index:2;
+  
+  .project & {
+    position:absolute;
+    
+    @include respond-to('mobile') {
+      position:relative;
+    }
+  }
+  
+  @include respond-to('mobile') {
+    position:relative;
+    top:0;
+    display:block;
+    padding-top:30px;
+    margin-bottom:25px;
+  }
+}
+
+.project-title {
+  display:none;
+  
+  .project & {
+    display:inline;
+  }
+ 
+}
+
+.home-link {
+  padding-left:$g-lr-margin;
+  
+  @include respond-to('mobile') {
+    padding-left:25px;
+    width:80%;
+  }
+  
+  &.hidden {
+    display:none;
+    
+    @include respond-to('mobile') {
+     display:block; 
+    }
+  }
+  
+  .project-title {
+    @include respond-to('mobile') {
+      display:block;
+      width:auto;
+      
+      .home &, .information &  {
+        display:none;
+      }
+    }
+  }
+}
+
+nav {
+  
+  @include respond-to('mobile') {
+    position:absolute;
+  }
+  
+  .project & {
+    //position:relative;
+    @include respond-to('mobile') {
+      position:absolute;
+    }
+  }
+  
+  right:$g-lr-margin;
+  width:25%;
+  
+  @include respond-to('mobile') {
+    right:25px;
+    width:auto;
+  }
+  
+  ul {
+    float:left;
+  }
+  
+  a {
+    
+  }
+}

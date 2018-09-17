@@ -1,0 +1,52 @@
+section {
+	@include flexbox;
+	@include flex-direction(column);
+	padding:$g-tb-margin 0 0 0;
+	background:$c-background;
+  position:relative;
+  z-index:1;
+  
+	@include respond-to(mobile-portrait) {
+		padding:$g-tb-margin $g-lr-margin/2 $g-tb-margin $g-lr-margin/2;
+	}
+  
+  .inner-container {
+    margin:0 $g-lr-margin;
+    width:100%;
+  }
+	
+}
+
+.page-callout.footer-callout {
+  margin:0;
+  max-width:100%;
+  
+}
+
+#studio-callout {
+  
+  .default & {
+    margin-bottom:$g-tb-margin * 3;
+  }
+}
+
+.project-section {
+  display:block;
+}
+
+#work-callout {
+  //background-image:url('images/anntaylor_fall16_01.jpg');
+  //margin-top:$g-tb-margin * 3;
+  
+  h1, span {
+    color:$c-white;
+    
+  
+  }
+  
+  .underline {
+    background-color:$c-white;
+  }
+
+}
+

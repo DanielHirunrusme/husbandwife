@@ -1,0 +1,4 @@
+.inner-main {
+  @include flexbox;
+  @include justify-content(space-between);
+}

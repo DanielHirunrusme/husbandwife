@@ -1,0 +1,25 @@
+main {
+  min-height:100%;
+  position:absolute;
+  top:0;
+  width:100%;
+  @include flexbox;
+  
+  
+  @include respond-to('mobile') {
+    position:relative;
+    //display:block;
+  }
+  
+  .inner-main {
+    margin:$g-tb-margin $g-lr-margin;
+    
+    @include respond-to('mobile') {
+      position:relative;
+      margin-top:0;
+      //display:block;
+    }
+  
+  }
+  
+}

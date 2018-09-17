@@ -1,0 +1,41 @@
+body, html {
+	//height:100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	background-color:$c-background;
+	@include transition(background-color .8s)
+  overflow-x:hidden;
+  //width:100%;
+  
+  
+  @include respond-to('mobile') {
+    margin-bottom:30px;
+  }
+  
+  &.home {
+    overflow-y:hidden;
+    
+    @include respond-to('mobile') {
+      overflow-y:auto;
+    }
+  }
+
+}
+
+.ui-page
+{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+canvas {
+    image-rendering: crisp-edges;
+}

@@ -1,0 +1,17 @@
+.about-text {
+	width:calc(50% - 25px);
+	display:inline-block;
+	
+	@include respond-to('mobile') {
+		width:auto;
+	}
+}
+
+.about-text-section {
+	@include flex-direction(row);
+	@include justify-content(space-between);
+	
+	@include respond-to(mobile-portrait) {
+		@include flex-direction(column);
+	}
+}

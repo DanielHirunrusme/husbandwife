@@ -1,0 +1,57 @@
+.information {
+  
+  .about-template {
+    width:75%;
+    margin-left:-$g-lr-margin * 2;
+    
+  	@include respond-to('mobile') {
+  		width:auto;
+      margin:0 25px;
+  	}
+  }
+  
+  .inner-main {
+    margin-right:0;
+    margin-left:0;
+    width:100%;
+    @include flexbox;
+    @include align-items(flex-end);
+    @include justify-content(flex-start);
+    
+    @include respond-to('mobile') {
+      display:block;
+    }
+    
+    
+    .text {
+      width:($g-desktop-column * 3) + ($g-gutter*2);
+      margin-left:$g-lr-margin * 3;
+      @include respond-to('mobile') {
+        width:auto;
+        margin-left:0;
+      }
+      
+      
+    }
+  
+    .clients, .contact-info {
+      margin-left:$g-lr-margin;
+      
+      @include respond-to('mobile') {
+        margin-left:0;
+        margin-top:25px;
+      }
+      
+    }
+    
+  }
+  
+  
+
+}
+
+.menu-over  {
+  .about-template {
+    display:none;
+  }
+}

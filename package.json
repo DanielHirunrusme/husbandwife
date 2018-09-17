@@ -1,0 +1,49 @@
+{
+  "name": "hudson-shively",
+  "version": "1.0.0",
+  "description": "Portfolio site for Hudson Shively",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Hirunrusme",
+  "license": "MIT",
+  "dependencies": {
+    "jquery-lazyload": "^1.9.7",
+    "jquery-mobile": "^1.4.1",
+    "jquery-mousewheel": "^3.1.13",
+    "jquery-touchswipe": "^1.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.1",
+    "barba.js": "^1.0.0",
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
+    "disable-scroll": "^0.2.6",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-newer": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "instafeed.js": "^1.4.1",
+    "minifyify": "^7.2.1",
+    "pretty-hrtime": "^1.0.1",
+    "stripify": "^4.0.0",
+    "tumblr.js": "1.0.0",
+    "urljs": "2.3.1",
+    "velocity-animate": "^1",
+    "viewerjs": "^0.10.0",
+    "vinyl-ftp": "^0.4.5",
+    "watchify": "^3.7.0"
+  },
+  "browser": {},
+  "browserify-shim": {
+    "jquery": "global:$"
+  }
+}

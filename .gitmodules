@@ -1,0 +1,3 @@
+[submodule "site/plugins/kirby-mobile-detect"]
+	path = site/plugins/kirby-mobile-detect
+	url = https://github.com/texnixe/kirby-mobile-detect.git

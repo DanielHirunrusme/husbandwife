@@ -1,0 +1,30 @@
+title: Site
+pages: default
+fields:
+  title:
+    label: Title
+    type:  text
+  subtitle:
+    label: Subtitle
+    type: text
+  author:
+    label: Author
+    type:  text
+  description:
+    label: Description
+    type:  textarea
+  keywords:
+    label: Keywords
+    type:  tags
+  copyright:
+    label: Copyright
+    type:  textarea
+  phone:
+    label: Phone Number
+    type:  text
+  email:
+    label: Email
+    type:  text
+  address:
+    label: Address
+    type: textarea
