@@ -1,54 +1,33 @@
 <?php snippet('header') ?>
 
-
-
-<main class="main page-template project-template" data-title="<?= $page->title() ?>" data-module-init="project" data-template="project" role="main">
-  <div class="project-images">
-    <div id="project-image-viewer" class="inner-project-images">
-  <?php foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
-    <div class="project-image">
-      <?php if (!detect()->isMobile()): ?>
-      <a class="image-link" href="<?php echo $page->url() ?>">
-        <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>" />
-      </a>
-      <?php else: ?>
-        <img src="<?php echo $image->url() ?>" alt="<?php echo $page->title()->html() ?>" />
-      <?php endif; ?>
-    </div>
-  <?php endforeach ?>
-    </div>
-  
+  <main class="main" role="main">
     
-  
-  </div>
-  
-  <div class="project-text">
-    <div class="text">
-      <?= $page->text() ?>
-    </div>
-  </div>
-  
-  <ul class="project-nav">
-    <?php if($page->hasPrevVisible()): ?>
-    <li><a href="<?php echo $page->prevVisible()->url() ?>">
-      Prev
-      <div class="first-image">
-        <img src="<?= $page->prevVisible()->images()->first()->url()?>" />
+    <header class="wrap">
+      <h1><?= $page->title()->html() ?></h1>
+      <div class="intro text">
+        <?= $page->year() ?>
       </div>
-    </a></li>
-    <?php endif ?>
+      <hr />
+    </header>
     
-    <?php if($page->hasNextVisible()): ?>
-    <li><a href="<?php echo $page->nextVisible()->url() ?>">
-      Next
-      <div class="first-image">
-        <img src="<?= $page->nextVisible()->images()->first()->url()?>" />
-      </div>
-    </a></li>
-    <?php endif ?>
-  </ul>
-  
- 
-  
-</main>
+    <div class="text wrap">
+      
+      <?= $page->text()->kirbytext() ?>
+
+      <?php
+      // Images for the "project" template are sortable. You
+      // can change the display by clicking the 'edit' button
+      // above the files list in the sidebar.
+      foreach($page->images()->sortBy('sort', 'asc') as $image): ?>
+        <figure>
+          <img src="<?= $image->url() ?>" alt="<?= $page->title()->html() ?>" />
+        </figure>
+      <?php endforeach ?>
+      
+    </div>
+    
+    <?php snippet('prevnext') ?>
+
+  </main>
+
 <?php snippet('footer') ?>

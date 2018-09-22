@@ -1,14 +1,18 @@
+  <footer class="footer cf" role="contentinfo">
+    <div class="wrap wide">
 
-</div>
-</div>
-<!-- barba-containers -->
+      <p class="footer-copyright"><?php
+        // Parse Kirbytext to support dynamic year,
+        // but remove all HTML like paragraph tags:
+        echo html::decode($site->copyright()->kirbytext())
+      ?></p>
 
-<footer class="footer cf" role="contentinfo">
-</footer>
+      <p class="footer-madewithkirby">
+        <a href="http://getkirby.com/made-with-kirby-and-love">Made with Kirby and <b class="heart">♥</b></a>
+      </p>
+    
+    </div>
+  </footer>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <?php echo js('assets/main.min.js'); ?>
-  
 </body>
 </html>

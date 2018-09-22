@@ -1,24 +1,20 @@
 title: Projects
+
+files: false
+
 pages:
   template: project
-files: false
+
+options: 
+  template: false  
+  status: false  
+  url: false  
+
 fields:
   title:
     label: Title
     type:  text
-  builder:
-    label: Project Column
-    type: builder
-    fieldsets:
-      projectcategory:
-        label: Project Column
-        type: text
-        fields:
-          projectcategoryprojects:
-            label: Projects 
-            type: relationship
-            options: query
-            query:
-              page: work
-              fetch: children
-            search: true
+
+  text:
+    label: Text
+    type:  textarea

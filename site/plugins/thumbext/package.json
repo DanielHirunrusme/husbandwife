@@ -1,6 +1,0 @@
-{
-  "name": "thumbext",
-  "description": "Kirby Plugin for thumbnails using srcset for different device resolutions",
-  "license": "GNU GPLv3",
-  "type": "kirby-plugin"
-}

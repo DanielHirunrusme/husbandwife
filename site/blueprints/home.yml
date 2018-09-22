@@ -1,25 +1,16 @@
 title: Home
+
 pages: false
+
 fields:
   title:
     label: Title
     type:  text
+
+  intro:
+    label: Intro
+    type:  textarea
+
   text:
-    label: Title
-    type:  textarea
-  line-a:
-      type: line
-  about_title:
-    label: About Title
-    type:  text
-  about:
-    label: About Text
-    type:  textarea
-  line-b:
-      type: line
-  careers_title:
-    label: Careers Title
-    type:  text
-  careers:
-    label: Careers Text
+    label: Text
     type:  textarea
